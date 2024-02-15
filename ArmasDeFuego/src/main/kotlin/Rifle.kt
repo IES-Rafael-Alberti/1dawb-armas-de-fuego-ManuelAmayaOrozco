@@ -15,9 +15,9 @@ class Rifle(municion: Int,
             field = value
         }
 
-                init {
-                    require(radio.radio == "Intermedio" || radio.radio == "Corto") { "El rango de una pistola solo puede ser corto o intermedio." }
-                    require(danio in 5..10) { "El daño solo puede ser entre 5 y 10." }
-                }
+    init {
+        require(radio.radio == "Intermedio" || radio.radio == "Corto") { "El rango de una pistola solo puede ser corto o intermedio." }
+        require(danio in 5..10) { "El daño solo puede ser entre 5 y 10." }
+    }
 
 }

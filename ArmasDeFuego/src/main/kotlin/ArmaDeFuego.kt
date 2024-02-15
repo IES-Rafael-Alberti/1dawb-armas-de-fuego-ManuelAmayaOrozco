@@ -1,9 +1,9 @@
 import kotlin.random.Random
 
 abstract class ArmaDeFuego(private val nombre: String,
-                  private var municion: Int,
-                  private val municionARestar: Int,
-                  private val tipoDeMuncion: String) {
+                           private var municion: Int,
+                           private val municionARestar: Int,
+                           private val tipoDeMuncion: String) {
 
     abstract val danio: Int
     abstract val radio: Radio
@@ -58,6 +58,10 @@ abstract class ArmaDeFuego(private val nombre: String,
 
     override fun toString(): String {
         return "Nombre: $nombre, Munición: $municion, Tipo de Munición: $tipoDeMuncion, Daño: $danio, Radio: ${radio.radio}"
+    }
+
+    fun mostrarMunicionExtra() {
+        println("Munición extra = $cantidadMunicionExtra... Para todas las armas de fuego.")
     }
 
     companion object {
